@@ -14,7 +14,7 @@ pipeline {
                     steps {
                             sh 'gcc -o uppercase uppercase.c'
                             sh "./uppercase ${TEXT}"
-                            sh "uname -a"
+                            sh 'uname -n'
                         }
                 }
 
@@ -25,7 +25,7 @@ pipeline {
                     steps {
                             sh 'gcc -o reverse reverse.c'
                             sh "./reverse ${TEXT}"
-                            sh "uname -a"
+                            sh 'uname -n'
                         }
                 }
             }
